@@ -1,7 +1,13 @@
 # Docker-Atividade.pb
 Este é o repositório da atividade de Docker do programa de bolsas da Compass.Uol. Este projeto está sendo realizado em dupla, Wilseny e João Vitor.
 
-Primeiro iremos criar o banco de dados com o mysql através do docker compose. Nele será realizado as seguintes configurações:
+##Primeiro vamos instalar o Docker para Windows, realizando os seguintes passos:
+1. Configurar o WSL utilizando o PowerShell com permissão de administrador: "wsl --install", ou "wsl --install -d <Distribution Name>" para especificar uma distribuição Linux(Ubuntu vem por padrão).  
+2. Acessar o site oficial e realizar o download: https://docs.docker.com/desktop/install/windows-install/  
+3. Executar e avançar na instalção, seguindo as configurações padrão. 
+
+
+##Depois, iremos criar o banco de dados com o mysql através do docker compose. Nele será realizado as seguintes configurações:
 
 1. A imagem será mysql:latest;
 2. Caso tem algum erro com o container ele vai reiniciar automaticamente;
@@ -13,7 +19,7 @@ Primeiro iremos criar o banco de dados com o mysql através do docker compose. N
 4.4 MYSQL_PASSWORD recebe a senha do usuário que criamos acima;  
 5. Vamos persistir os dados do container na nossa máquina local.
 
-Agora vamos criar no docker compose as instruções para nosso container com WordPress com os seguintes objetivos:
+##Agora vamos criar no docker compose as instruções para nosso container com WordPress com os seguintes objetivos:
 
 1. A imagem dele será wordpress:latest;
 2. Ele reiniciar quando der algum erro;
@@ -27,3 +33,11 @@ Agora vamos criar no docker compose as instruções para nosso container com Wor
 5.1 guardamos as configs de uploads  
 5.2 guardamos os arquivos necessários para a construção do site.  
 6. Definimos que para subir este container, é necessário primeiro que tudo dê certo com o container do MySQl, pois o WordPress depende dele.
+
+##Para finalizar, vamos rodar a aplicação utilizando o Docker-Compose  
+
+1. Utilizando o PowerShell, vamos entrar no diretório do nosso arquivo .yml e inserir o comando "docker-compose up"  
+2. Pronto, nossa aplicação está rodando e pronto para ser utilizada!
+  
+##Referências
+1. WSL: https://learn.microsoft.com/en-us/windows/wsl/install 
