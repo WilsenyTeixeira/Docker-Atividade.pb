@@ -3,6 +3,7 @@ services:
   db:
     image: mysql:8.0.31
     restart: always
+    container_name: atividade-docker-mysql
     ports:
       - 3308:3306
     environment:
@@ -15,6 +16,7 @@ services:
   wordpress:
     image: wordpress:6.0.2
     restart: always
+    container_name: atividade-docker-wordpress
     ports:
       - 8080:80
     environment:
