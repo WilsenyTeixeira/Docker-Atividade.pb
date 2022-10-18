@@ -36,8 +36,10 @@ Este é o repositório da atividade de Docker do programa de bolsas da Compass.U
 
 ## Para finalizar, vamos rodar a aplicação utilizando o Docker-Compose  
 
-1. Utilizando o PowerShell, vamos entrar no diretório do nosso arquivo .yml e inserir o comando "docker-compose up"  
+1. Utilizando o PowerShell, vamos entrar no diretório do nosso arquivo .yml com o comando: cd <Diretório>.  
+2. Inserir o comando "docker-compose up".  
 2. Pronto, nossa aplicação está rodando e pronta para ser utilizada!
   
 ##Referências
-1. WSL: https://learn.microsoft.com/en-us/windows/wsl/install 
+1. WSL: https://learn.microsoft.com/en-us/windows/wsl/install  
+2. Docker for Windows: https://docs.docker.com/desktop/install/windows-install/
