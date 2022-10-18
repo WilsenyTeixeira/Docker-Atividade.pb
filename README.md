@@ -40,6 +40,6 @@ Este é o repositório da atividade de Docker do programa de bolsas da Compass.U
 2. Inserir o comando "docker-compose up".  
 2. Pronto, nossa aplicação está rodando e pronta para ser utilizada!
   
-##Referências
+## Referências
 1. WSL: https://learn.microsoft.com/en-us/windows/wsl/install  
 2. Docker for Windows: https://docs.docker.com/desktop/install/windows-install/
