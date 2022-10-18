@@ -1,7 +1,7 @@
 version: '3.9'
 services:
   db:
-    image: mysql:latest
+    image: mysql:8.0.31
     restart: always
     ports:
       - 3308:3306
@@ -13,7 +13,7 @@ services:
     volumes:
       - ./database/wordpress_data:/var/lib/mysql
   wordpress:
-    image: wordpress:latest
+    image: wordpress:6.0.2
     restart: always
     ports:
       - 8080:80
