@@ -1,7 +1,7 @@
 # Docker-Atividade.pb
 Este é o repositório da atividade de Docker do programa de bolsas da Compass.Uol. Este projeto está sendo realizado em dupla, Wilseny e João Vitor.
 
-Primeiro iremos criar o banco de dados com o mysql atravez do docker compose. Nele será realizado as seguintes configurações:
+Primeiro iremos criar o banco de dados com o mysql através do docker compose. Nele será realizado as seguintes configurações:
 
 1. A imagem será mysql:latest;
 2. Caso tem algum erro com o container ele vai reiniciar automaticamente;
