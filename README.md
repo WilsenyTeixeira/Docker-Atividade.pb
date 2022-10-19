@@ -37,16 +37,28 @@ $ touch .env
 $ code .
 ```
 Depois, iremos criar o banco de dados com o Mysql através do Docker Compose. Nele será realizado as seguintes configurações:
+>**Note**
+>Caso não tenha experiência com docker compose ou arquivos env, consulte os arquivos deste respositório.
 1. Versão do compose
+
 2. A imagem será mysql:8.0.31;
+
 3. Caso tenha algum erro com o container ele vai reiniciar automaticamente;
+
 4. Dar nome ao container;
+
 5. Nosso host terá acesso ao serviço pela porta 3308, que por sua vez se conectará na porta 3306 do container com MySQL;
+
 6. Vamos especificar algumas variáveis de ambiente:
+
 6.1 MYSQL_ROOT_PASSWORD recebe a senha para o usuário "root";
+
 6.2 MYSQL_DATABASE recebe o da database que será criada junto com o container;
+
 6.3 MYSQL_USER recebe o nome de usuário que terá acesso à database acima;  
+
 6.4 MYSQL_PASSWORD recebe a senha do usuário que criamos acima;  
+
 7. Vamos persistir os dados do container na nossa máquina local.
 
 >**Note**
@@ -57,16 +69,28 @@ Depois, iremos criar o banco de dados com o Mysql através do Docker Compose. Ne
 Agora vamos criar no Docker Compose as instruções para nosso container com WordPress com os seguintes objetivos:
 
 1. A imagem dele será wordpress:6.0.2;
+
 2. Ele reiniciará quando der algum erro;
-3. Dar nome ao container
+
+3. Dar nome ao container;
+
 4. Nosso host terá acesso ao serviço pela porta 8080, que por sua vez se conectará na porta 80 do container com WordPress;
-5. Vamos especificar algumas variáveis de ambiente:  
-5.1 WORDPRESS_DB_HOST recebe o container com um serviço de database, no caso o MySQL;  
-5.2 WORDPRESS_DB_USER recebe o nome de usuário do banco de dados;  
-5.3 WORDPRESS_DB_PASSWORD recebe a senha do usuário acima;  
-5.4 WORDPRESS_DB_NAME recebe o nome da database que vai utlizar;  
-6. Vamos persistir os dados da nossa aplicação do WordPress:
+
+5. Vamos especificar algumas variáveis de ambiente:
+
+5.1 WORDPRESS_DB_HOST recebe o container com um serviço de database, no caso o MySQL; 
+
+5.2 WORDPRESS_DB_USER recebe o nome de usuário do banco de dados;
+
+5.3 WORDPRESS_DB_PASSWORD recebe a senha do usuário acima;
+
+5.4 WORDPRESS_DB_NAME recebe o nome da database que vai utlizar;
+
+6. Vamos persistir os dados da nossa aplicação do WordPress;
+
 7. Definimos que para subir este container, é necessário primeiro que tudo dê certo com o container do MySQl, pois o WordPress depende dele.
+
+8. Ao final criamos os volumes e seus nomes;
 
 
 Agora em nosso arquivo .env vamos passar os valores para as varáveis:
