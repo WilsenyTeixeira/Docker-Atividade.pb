@@ -34,12 +34,16 @@ Este é o repositório da atividade de Docker do programa de bolsas da Compass.U
 5.2 Guardamos os arquivos necessários para a construção do site.  
 6. Definimos que para subir este container, é necessário primeiro que tudo dê certo com o container do MySQl, pois o WordPress depende dele.
 
-## Para finalizar, vamos rodar a aplicação utilizando o Docker-Compose  
+## Para finalizar, vamos entender a vantagem e como rodar a aplicação utilizando o Docker-Compose  
 
-1. Utilizando o PowerShell, vamos entrar no diretório do nosso arquivo .yml com o comando: cd <Diretório>.  
-2. Inserir o comando "docker-compose up".  
-2. Pronto, nossa aplicação está rodando e pronta para ser utilizada!
+1. O Docker-Compose possui a vantagem de utilizar mais de um container de maneira organizada e antecipada, definindo as configurações, variáveis e a ordem em que os containers serão executados.
+2. Utilizando o PowerShell, vamos entrar no diretório do nosso arquivo .yml com o comando: cd <Diretório>.  
+3. Inserir o comando "docker-compose up".  
+4. Pronto, nossa aplicação está rodando e pronta para ser utilizada!
   
 ## Referências
 1. WSL: https://learn.microsoft.com/en-us/windows/wsl/install  
 2. Docker for Windows: https://docs.docker.com/desktop/install/windows-install/
+3. Docker do 0 à Maestria: Contêineres Desmistificados + EXTRAS https://compassuol.udemy.com/course/docker-do-zero-a-maestria-conteinerizacao-desmistificada/learn/lecture/15140018#overview  
+4. Aprenda DOCKER e contêineres de maneira simples e rápida https://compassuol.udemy.com/course/aprenda-docker-simples-e-rapido/learn/lecture/27079890#overview
+
