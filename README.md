@@ -99,7 +99,7 @@ MYSQL_ROOT_PASSWORD=root_senha_desejada
 ...
 WORDPRESS_DB_NAME=db_usado_pelo_wordpress
 
-##Subindo nossa Aplicação
+## Subindo nossa Aplicação
 >**Warning**
 >Garanta que você esteja dentro do diretório do projeto.
 ```bash
@@ -113,6 +113,12 @@ O servidor inciará na porta:8080 - acesse `http://localhost:8080`
 ## Para finalizar, vamos entender a vantagem  de usar o Docker-Compose  
 
 O Docker-Compose possui a vantagem de utilizar mais de um container de maneira organizada e antecipada, definindo as configurações, variáveis e a ordem em que os containers serão executados.
+  
+![image](https://user-images.githubusercontent.com/80935917/196683850-e6d624f7-66f9-42c3-a756-1e1f34694897.png)
+![image](https://user-images.githubusercontent.com/80935917/196683994-e477221e-80e5-4fc8-a305-c85d2c491be4.png)
+![image](https://user-images.githubusercontent.com/80935917/196684289-233f4413-5d86-425e-96eb-d7421e47adb6.png)
+![image](https://user-images.githubusercontent.com/80935917/196684356-226dfb7b-fbde-45db-8c6c-96594dea0515.png)
+
   
 ## Referências
 1. WSL: https://learn.microsoft.com/en-us/windows/wsl/install  
