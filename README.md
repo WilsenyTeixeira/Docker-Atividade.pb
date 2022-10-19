@@ -51,7 +51,7 @@ Depois, iremos criar o banco de dados com o Mysql através do Docker Compose. Ne
 
 >**Note**
 >Caso não deseje usar o aqruivo .env, basta passar os valores de cada variável de ambiente diretamente no arquivo docker-compose.yml
->>**Exemplo**
+>>**Exemplo:**
 >WORDPRESS_DB_NAME: database_nome_desejado
 
 Agora vamos criar no Docker Compose as instruções para nosso container com WordPress com os seguintes objetivos:
@@ -76,7 +76,7 @@ MYSQL_ROOT_PASSWORD=root_senha_desejada
 WORDPRESS_DB_NAME=db_usado_pelo_wordpress
 
 ##Subindo nossa Aplicação
->**🔴IMPORTANT❗🔴**
+>**Warning**
 >Garanta que você esteja dentro do diretório do projeto.
 ```bash
 
