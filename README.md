@@ -43,14 +43,16 @@ Depois, iremos criar o banco de dados com o Mysql através do Docker Compose. Ne
 4. Dar nome ao container;
 5. Nosso host terá acesso ao serviço pela porta 3308, que por sua vez se conectará na porta 3306 do container com MySQL;
 6. Vamos especificar algumas variáveis de ambiente:
-6.1 MYSQL_ROOT_PASSWORD recebe a senha para o usuário "root";  
-6.2 MYSQL_DATABASE recebe o da database que será criada junto com o container;  
+6.1 MYSQL_ROOT_PASSWORD recebe a senha para o usuário "root";
+6.2 MYSQL_DATABASE recebe o da database que será criada junto com o container;
 6.3 MYSQL_USER recebe o nome de usuário que terá acesso à database acima;  
 6.4 MYSQL_PASSWORD recebe a senha do usuário que criamos acima;  
 7. Vamos persistir os dados do container na nossa máquina local.
 
-**Note**
-Caso não deseje usar o aqruivo .env, basta passar os valores de cada variávvel de ambiente diretamente no arquivo docker-compose.yml
+>**Note**
+>Caso não deseje usar o aqruivo .env, basta passar os valores de cada variável de ambiente diretamente no arquivo docker-compose.yml
+>>**Exemplo**
+>WORDPRESS_DB_NAME: database_nome_desejado
 
 Agora vamos criar no Docker Compose as instruções para nosso container com WordPress com os seguintes objetivos:
 
@@ -64,7 +66,7 @@ Agora vamos criar no Docker Compose as instruções para nosso container com Wor
 5.3 WORDPRESS_DB_PASSWORD recebe a senha do usuário acima;  
 5.4 WORDPRESS_DB_NAME recebe o nome da database que vai utlizar;  
 6. Vamos persistir os dados da nossa aplicação do WordPress:
-6. Definimos que para subir este container, é necessário primeiro que tudo dê certo com o container do MySQl, pois o WordPress depende dele.
+7. Definimos que para subir este container, é necessário primeiro que tudo dê certo com o container do MySQl, pois o WordPress depende dele.
 
 
 Agora em nosso arquivo .env vamos passar os valores para as varáveis:
@@ -73,18 +75,20 @@ MYSQL_ROOT_PASSWORD=root_senha_desejada
 ...
 WORDPRESS_DB_NAME=db_usado_pelo_wordpress
 
-## Para finalizar, vamos entender a vantagem e como rodar a aplicação utilizando o Docker-Compose  
-
-O Docker-Compose possui a vantagem de utilizar mais de um container de maneira organizada e antecipada, definindo as configurações, variáveis e a ordem em que os containers serão executados.
-  
-
+##Subindo nossa Aplicação
+>**🔴IMPORTANT❗🔴**
+>Garanta que você esteja dentro do diretório do projeto.
 ```bash
 
 # Suba os containers com docker compose
 $ docker-compose up -d
 ```
 Pronto, nossa aplicação está rodando e pronta para ser utilizada!
-O servidor inciará na porta:8080 - acesse <http://localhost:8080>
+O servidor inciará na porta:8080 - acesse `http://localhost:8080`
+
+## Para finalizar, vamos entender a vantagem  de usar o Docker-Compose  
+
+O Docker-Compose possui a vantagem de utilizar mais de um container de maneira organizada e antecipada, definindo as configurações, variáveis e a ordem em que os containers serão executados.
   
 ## Referências
 1. WSL: https://learn.microsoft.com/en-us/windows/wsl/install  
